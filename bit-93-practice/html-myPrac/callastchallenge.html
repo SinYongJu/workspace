@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+
+  form
+  th{
+    width:100px;
+    border: 2px solid red;
+
+  }
+  table {
+    border: 2px solid red;
+    width: 250px;
+    height : 400px;
+
+  }
+
+  #thwindow{
+    width: 300px;
+    height: 50px;
+    border: 2px solid red;
+  }
+
+  </style>
+</head>
+<body>
+  <form>
+    <table>
+    <div id="thwin">
+      <th id="thwindow">0</th>
+    </div>
+    <tr>
+      <td><button id="btn1" type="button" value="1">1</button></td>
+      <td><button id="btn2" type="button" value="2">2</button></td>
+      <td><button id="btn3" type="button" value="3">3</button></td>
+      <td><button id="btnDivide" type="button" value="/">/</button></td>
+    </tr>
+    <tr>
+      <td><button id="btn4" type="button" value="4">4</button></td>
+      <td><button id="btn5" type="button" value="5">5</button></td>
+      <td><button id="btn6" type="button" value="6">6</button></td>
+      <td><button id="btnMultiple" type="button" value="*">*</button></td>
+    </tr>
+    <tr>
+      <td><button id="btn7" type="button" value="7">7</button></td>
+      <td><button id="btn8" type="button" value="8">8</button></td>
+      <td><button id="btn9" type="button" value="9">9</button></td>
+      <td><button id="btnMinus" type="button" value="-">-</button></td>
+    </tr>
+    <tr>
+      <td><button id="btn0" type="button" value="0">0</button></td>
+      <td><button id="ac" type="reset" value="">ac</button></td>
+      <td><button id="btnPlus" type="button" value="+">+</button></td>
+      <td><button id="btnEqual" type="button" value="=">=</button></td>
+      <td><button id="backer" type="button" value="<-">&lt;-</button></td>
+
+    </tr>
+  </table>
+</form>
+
+
+
+<script>
+  var windo = document.querySelector('#thwindow')
+  windo.value = ""
+  var backspacer = windo.innerHTML
+
+  var btn1 = document.querySelector('#btn1')
+  btn1.addEventListener('click',function(){
+    windo.innerHTML +=btn1.value
+    windo.value+=btn1.value
+    console.log(windo.value)
+
+    })
+  var btn2 = document.querySelector('#btn2')
+  btn2.addEventListener('click',function(){
+    windo.innerHTML +=btn2.value
+    windo.value+=btn2.value
+    })
+  var btn3 = document.querySelector('#btn3')
+  btn3.addEventListener('click',function(){
+  windo.innerHTML +=btn3.value
+  windo.value+=btn3.value
+  console.log(windo.value)
+  })
+  var btn4 = document.querySelector('#btn4')
+  btn4.addEventListener('click',function(){
+  windo.innerHTML +=btn4.value
+  windo.value+=btn4.value
+  console.log(windo.value)
+
+  })
+  var btn5 = document.querySelector('#btn5')
+  btn5.addEventListener('click',function(){
+  windo.innerHTML +=btn5.value
+  windo.value+=btn5.value
+  console.log(windo.value)
+  })
+  var btn6 = document.querySelector('#btn6')
+  btn6.addEventListener('click',function(){
+    windo.innerHTML +=btn6.value
+    windo.value+=btn6.value
+    console.log(windo.value)
+    })
+  var btn7 = document.querySelector('#btn7')
+  btn7.addEventListener('click',function(){
+    windo.innerHTML +=btn7.value
+    windo.value+=btn7.value
+    console.log(windo.value)
+    })
+  var btn8 = document.querySelector('#btn8')
+  btn8.addEventListener('click',function(){
+  windo.innerHTML +=btn8.value
+  windo.value+=btn8.value
+  console.log(windo.value)
+  })
+  var btn9 = document.querySelector('#btn9')
+  btn9.addEventListener('click',function(){
+  windo.innerHTML +=btn9.value
+  windo.value+=btn9.value
+  console.log(windo.value)
+  })
+
+
+  var ac = document.querySelector('#ac')
+  ac.addEventListener('click',function(){
+
+  windo.innerHTML=""
+  windo.value=""
+  })
+
+
+
+
+  var btnPlus = document.querySelector('#btnPlus')
+  btnPlus.addEventListener('click',function(){
+  windo.value +=btnPlus.value
+    windo.innerHTML=""
+  console.log(windo.value)
+  })
+  var btnMinus = document.querySelector('#btnMinus')
+  btnMinus.addEventListener('click',function(){
+    windo.innerHTML=""
+  windo.value +=btnMinus.value
+console.log(windo.value)
+  })
+  var btnDivide = document.querySelector('#btnDivide')
+  btnDivide.addEventListener('click',function(){
+    windo.innerHTML=""
+
+  windo.value +=btnDivide.value
+console.log(windo.value)
+  })
+  var btnMultiple = document.querySelector('#btnMultiple')
+  btnMultiple.addEventListener('click',function(){
+    windo.innerHTML=""
+  windo.value +=btnMultiple.value
+console.log(windo.value)
+  })
+
+
+  var equal = document.querySelector('#btnEqual')
+  equal.addEventListener('click', function(){
+    console.log(windo)
+    windo.innerHTML=0
+    console.log(windo.value)
+      windo.innerHTML+=eval(windo.value);
+
+
+  })
+  var backer = document.querySelector('#backer')
+  backer.addEventListener('click', function(){
+    var back = windo.innerHTML.length
+    console.log(back)
+  windo.innerHTML = windo.innerHTML.slice(0,-1)
+  console.log(windo.innerHTML)
+  windo.value = windo.innerHTML
+  })
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

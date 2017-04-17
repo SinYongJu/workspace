@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--xml(extessible markup language)
+구조를 갖춘 데이터를 표현하기 위해 만들어진 형식
+에플리케이션 간의 데이터를 교환하는 용도
+
+xml은 작성 규칙을 지닌다.
+  xml 선언부
+  xml 문서 형식
+  xml 태그
+
+1) xml 선운부
+=> 선언부 앞에 어떤 값도 와서는 안된다.
+=> version
+  값은 1.0만 가능하다.
+  필수 속성.
+=>encoding
+  xml 문서가 어떤 문자집합에서 인코딩 되었는지를 지정함
+  선택속성
+  생략하면 기본 값이 "UTF-8"이다.
+=> standalone
+  xml 문서를 읽을 때 참조할 다른 파일이 있는지 여부
+  선택 속성
+  생략하면 기본 값이 "no"이다.
+
+2) xml 문서 형식
+=> xml 문서의 루트 태그와 DTD 정보를 선언한다
+<!DOCTYPE 루트태그명 PUBLIC/SYSTEM "공인이름" "DTD URL">
+=> 예) HTML4.x 에서는 다음과 같이 DOCTYPE을 선언한다.
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+=> DTD를 지정하는 것은 생략할 수 있다.
+=> XML 문서 형식을 생략하게 되면 DTD 규칙을 검사하지 않고,
+  단지 XML 기본 규칙만 검사한다.
+
+
+3) XML 태그 선언
+=> XML 이름 짓는 규칙에 따라 태그를 선언한다.
+=> 만약 DTD를 지정하게 되면 그 DTD 규칙에 따라 태그를 사용해야 한다.
+=> 데이터를 표현하는 부분이다.
+
+DOCTYPE 규격 상세 설명
+<!DOCTYPE 루트태그명 공개여부 "공개이름" "HTML 태긔의 사용 규칙을 담음 파일의 URL">
+1) 루트 태그명
+  HTML 문서의 최상위 태그는 'html'이다.
+2) 공개 여부
+  => public
+    모든 사람이 사용할 수 있도록 공개한 태그
+    public "공개이름" "규칙을 담은 파일의 url"
+  => system
+    개인이나 특정회사에서 사용하기 위해 만든 태그
+    system "규칙을 담은 파일의 url"
+3) 공개 이름
+  => "국제공인여부// 태그관리 조직이름// 태그이름 및 버전//표기언어"
+  => 국제공인여부: 국제공이(국가 간의 약속;+) 비공인(-)
+4) DTD URL
+  => DTD(document type deficition) : 태그의 사용 규칙을 정의한 문서
+다음은 학생 데이터를 구조적으로 표현하기 위한 태그 사용 예
+이점
+=>태그를 사용하여 데이터가 어떤 의미를 지니는지 지정가능
+    태그를 사용하면 특정 데이터만 추출하기 쉽다
+=>태그와 태그는 포함관계로 표현한다.
+    데이터를 개별적으로 관리하고 구분하기 쉬워진다.
+=>xml 태그 텍스트로 작성한다.
+  전용프로그램을 사용할 필요가 없다.
+  텍스트 편집기로 사람이 직접보고 편집가능
+
+바이너리 데이터 vs 텍스트 데이터
+바이너리 데이터
+일반 텍스트 편집기(메모장, vi)로 편집할 수 없는 데이터
+만약 임시적으로 편집하면 파일 형식을 깨뜨리기 때문에
+더이상 유효한 파일이 아닌것이 된다.
+예) .jpeg, .gif, .mp3, .avi, .hwp, .xls, .ppt, .doc 등
+
+텍스트 데이터
+일반 텍스트 편집기로 편집해도 되는 데이터
+.js .html .json 등
+-->
+
+<students>
+  <student>
+    <name>홍길동</name>
+    <tel>1111-2222</tel>
+    <emil>hong@test.com</email>
+  </student>
+  <student>
+    <name>임꺽정</name>
+    <tel>1111-3333</tel>
+    <email>leem@test.com</email>
+  </student>
+</students>

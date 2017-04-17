@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      border: 1px solid blue;
+    }
+    div {
+      margin: 10px;
+      border: 1px solid red;
+    }
+
+    p {
+      display: inline-block;
+    }
+    #container{
+      padding: 0px;
+      margin: 10px;
+      /*조상격의 태그에 relative 속성을 부여한다.*/
+      position: relative;
+
+
+    }
+
+    #head{
+
+    }
+
+    #navi{
+      /* absolute로 부모의 relative를 기준으로 태그를 띄운다.*/
+      position: absolute;
+      width:200px;
+      left: 0px;
+    }
+
+    #section{
+      padding: 0px;
+      min-height: 500px;
+      margin-left: 220px;
+
+
+    }
+
+    #footer{
+      position: fixed;
+
+    }
+  </style>
+
+</head>
+<body>
+  <div id="container">
+    <div id="head">
+      나는 머가리
+    </div>
+
+
+    <div id="navi">
+      나는 내비!
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+
+    <div id="section">
+      <div id="section1">
+      <p>
+      <br><br><br><br><br><br><br><br>
+      </p>
+      </div>
+
+      <div id="section1">
+      <p>
+      <br><br><br><br><br><br><br><br><br>
+      </p>
+      </div>
+    </div>
+
+    <div>
+      나는 footer
+    </div>
+  </div>
+
+</body>
+</html>

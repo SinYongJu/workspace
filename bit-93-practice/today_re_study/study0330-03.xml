@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+ELEMNET
+ 태그의 내용   TXT
+ 속성 attribute
+ 다른 ELEMENT들
+ 위에 3개 섞어도 되용~
+ case-sensitive
+ must start with a letter or underscore
+ cannot start with the letters xml (or XML, or Xml, etc)
+ can contain letters, digits, hyphens, underscores, and periods
+Element names cannot contain spaces
+
+Dom과 DTD를 이용하여 설정!
+ROOT의 설정! <!DOCTYPE 태그명 (SYSTEM 이라 하면 ) [.....]>
+ELEMENT
+? => 0또는 1
++ => 1개 이상
+* => 0개 이상
+
+-->
+<!DOCTYPE Student-Note [
+<!ELEMENT Student_Note (note*)>
+<!ELEMENT Note (To, From, Heading, Body?, Birth, Tel+, friend*)>
+<!ELEMENT To (#PCDATA)>
+
+<!ELEMENT From (#PCDATA)>
+<!ELEMENT Heading (#PCDATA)>
+<!ELEMENT Body (#PCDATA)>
+<!ELEMENT Birth (#PCDATA)>
+<!ELEMENT Tel (#PCDATA)>
+<!ELEMENT friend EMPTY>
+]>
+<Student_Note>
+  
+  <Note>
+    <To>Tove</To>
+    <From>Jani &gt;&gt;califonia  </From>
+    <Heading>Reminder</Heading>
+    <Body>Don't forget me this weekend!</Body>
+  </Note>
+  <privacy>
+    <Birth>2019/06/14</Birth>
+    <Tel>111-1111</Tel>
+    <Tel>222-1111</Tel>
+    <Tel></Tel>
+  </privacy>
+
+  <Note To="Tove" From="Jani" Heading="reminder" Body="Don't forget me this weekend!">
+  <privacy Birth="Birth" Tel="111-1111 222-1111" >
+
+
+
+
+
+
+
+
+
+
+  <Note>
+    <To>Love</To>
+    <From>Jeni</From>
+    <Heading>minder &lt; &lt; portsman</Heading>
+  </Note>
+  <privacy>
+    <Birth/>
+  </privacy>
+
+  <Note To="Love" From="Jeni" Heading="minder &lt;&lt; portsman">
+  <privacy Birth="">
+
+  <Note>
+    <To>Toni</To>
+    <From>niche</From>
+    <Heading>Reader&apos;in america&apos;</Heading>
+    <Body>Don't touch me this weekend!</Body>
+  </Note>
+  <privacy>
+    <Birth/>
+    <friend></friend> <!--EMPTY -->
+  </privacy>
+
+  <Note To="Toni" From="niche" Heading="Reader&apos;in america&apos;" Body="Don't touch me this weekend!">
+  <privacy birth=EMPTY friend="" >
+
+</Student_Note>

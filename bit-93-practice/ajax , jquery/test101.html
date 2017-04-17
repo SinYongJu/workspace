@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    div {
+      border: 1px solid red;
+    }
+    p {
+      width:100px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <form>
+      <div>
+        <P id="disdo"></p>
+        </div>
+      <div>
+      <button id="restt" type="reset" >ac</button>
+      <button id="in1" type="text" value="1">1</button>
+      <button id="in2" type="text" value="2">2</button>
+      <button id="in3" type="text" value="3">3</button>
+      <button id="in4" type="text" value="4">4</button>
+      <button id="in5" type="text" value="5">5</button>
+      <button id="in6" type="text" value="6">6</button>
+      <button id="in7" type="text" value="7">7</button>
+      <button id="in8" type="text" value="8">8</button>
+      <button id="in9" type="text" value="9">9</button>
+      <button id="plus" type="text" value="+">+</button>
+      <button id="minus" type="text" value="-">-</button>
+      <button id="divide" type="text" value="/">/</button>
+      <button id="multiple" type="text" value="*">*</button>
+      <button id="equal" type="text" value="=">=</button>
+    </div>
+    </form>
+  </table>
+<script>
+
+var ptags = document.getElementById("disdo")
+
+  var btn1 = document.querySelector("#in1")
+  btn1.addEventListener('click', function(){
+     var btnb1 = btn1.innerHTML
+  //  ptag.value += btnb1
+    ptags.innerHTML+=btnb1
+  })
+  var btn2 = document.querySelector("#in2")
+  btn2.addEventListener('click', function(){
+     var btnb2 = btn2.innerHTML
+    ptags.innerHTML += btnb2
+  })
+
+  var btn7 = document.querySelector("#in7")
+  btn7.addEventListener('click',function(){
+    console.log(btn7.innerHTML)
+    var value7 = btn7.innerHTML
+    ptags.innerHTML += value7
+  })
+
+
+
+
+
+
+</script>
+</body>
+</html>

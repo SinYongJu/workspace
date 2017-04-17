@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입하던지 말던지</title>
+  <style>
+    table,td,tr,th {
+      border-style: solid;
+      border-color:  coral;
+
+    }
+    a {
+      border: 1px solid gray;
+    }
+
+  </style>
+</head>
+<body>
+<img src="C:\workspace\java93\bit-93-practice\html-myPrac\sul-hynnS2.jpg" style="width:300px;height:300px">
+<form action="http://www.naver.com" method="get">
+<table style="width: 500px; height:200px" border="1" cellspacing="0">
+  <tr>
+    <th>
+      NAME
+    </th>
+    <td>
+      <input type="text" name="name">
+    </td>
+        <th colspan="1">GENDER</th>
+        <td>
+
+        <input type="radio" name="gender" value=1/>남
+        <input type="radio" name="gender" value=1/>여
+
+
+    </td>
+  </tr>
+
+  <tr>
+    <th>
+      EMAIL
+    </th>
+    <td>
+      <input type="email" name="email"></td>
+    <th colspan="2"> 가입인사</th>
+
+  </tr>
+
+  <tr>
+    <th>
+      PASSWORD
+    </th>
+    <td><input type="password" name="pwd"></td>
+    <td rowspan="3" colspan="2">
+      <textarea row="30" cols="30">여기에 남겨주세요!</textarea>
+    </td>
+  </tr>
+
+  <tr>
+    <th>
+      TEL
+    </th>
+    <td><input type="tel" name="tel"><br></td>
+
+  </tr>
+
+  <tr>
+    <th>
+      REGION
+    </th>
+    <td>
+     REGION: <select>
+            <option>경기</option>
+            <option>서울</option>
+            <option>인천</option>
+            <option>안산</option>
+           </select>
+           <br/>
+    탈것?!: <select>
+           <option>도보</option>
+           <option>버스</option>
+           <option>자가용</option>
+           <option>전철?!</option>
+          </select>
+    </td>
+  </tr>
+
+  <tr>
+    <th>
+      재직여부
+    </th>
+    <td colspan="5">
+     (해당한다면?!)<br><input type="checkbox" name="job" value=1>재직중
+
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="4">
+      <input type="reset" value="reset"/>
+      <input type="submit" value="가입"/>
+      <a href="prac2iframe.html">약관</a>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      주인장왈!
+    </th>
+    <td colspan="4">
+      <iframe src="prac2iframe.html"  style="border:1px; width:200px;heigt:200px"></iframe>
+    </td>
+  </tr>
+
+</table>
+</form>
+
+</body>
+</html>
